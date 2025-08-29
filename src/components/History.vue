@@ -79,7 +79,7 @@
 </template>
 
 <script>
-import { historyData } from "../data/HistoryData";
+import { historyData } from "../data/historyData";
 
 export default {
   name: "History",

@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import { ordersData } from "../data/OrdersData";
+import { ordersData } from "../data/ordersData";
 
 export default {
   name: "Orders",

@@ -118,7 +118,7 @@
 </template>
 
 <script>
-import { reservationData } from "../data/ReservationData";
+import { reservationData } from "../data/reservationData";
 
 export default {
   name: "Reservation",

@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import { aboutData } from '../data/AboutData';
+import { aboutData } from '../data/aboutData';
 
 export default {
   name: 'About',

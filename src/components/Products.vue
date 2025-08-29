@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import { productsData } from "../data/ProductsData";
+import { productsData } from "../data/productsData";
 
 export default {
   name: "Products",
