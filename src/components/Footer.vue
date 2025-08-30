@@ -1,20 +1,34 @@
 <template>
-  <footer id="contato" class="py-16" style="background: var(--neutro-escuro);">
+  <footer id="contato" class="py-16" style="background: var(--neutro-escuro)">
     <div class="container mx-auto px-6">
       <div class="grid md:grid-cols-3 gap-8 text-white">
         <div>
-          <img src="/icon (1).png" alt="" class="bg-white w-80 h-28 p-4 rounded-lg mb-4">
-          <p class="text-gray-300 mb-4">Confeitaria artesanal com sabores únicos e atendimento acolhedor.</p>
+          <img
+            src="/icon (1).png"
+            alt=""
+            class="bg-white w-80 h-28 p-4 rounded-lg mb-4"
+          />
+          <p class="text-gray-300 mb-4">
+            Confeitaria artesanal com sabores únicos e atendimento acolhedor.
+          </p>
           <div class="flex space-x-4">
-            <a href="https://wa.me/5541932773923" target="_blank" class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-full transition-colors">
+            <a
+              href="https://wa.me/5541932773923"
+              target="_blank"
+              class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-full transition-colors"
+            >
               WhatsApp
             </a>
-            <a href="#" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-full transition-colors">
+            <a
+              href="https://www.ifood.com.br/delivery/curitiba-pr/confeitaria-senior-koster-ltda-xaxim/53ebf9c4-aae2-4834-9e35-ba358542ff16"
+              target="_blank"
+              class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-full transition-colors"
+            >
               iFood
             </a>
           </div>
         </div>
-        
+
         <div>
           <h4 class="font-semibold text-lg mb-4">Horário de Funcionamento</h4>
           <div class="space-y-2 text-gray-300">
@@ -23,7 +37,7 @@
             <p>Segunda: Fechado</p>
           </div>
         </div>
-        
+
         <div>
           <h4 class="font-semibold text-lg mb-4">Contato</h4>
           <div class="space-y-2 text-gray-300">
@@ -33,7 +47,7 @@
           </div>
         </div>
       </div>
-      
+
       <div
         class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
       >
@@ -66,6 +80,6 @@
 
 <script>
 export default {
-  name: 'Footer'
-}
+  name: "Footer",
+};
 </script>
