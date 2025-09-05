@@ -58,7 +58,7 @@
             <img
               src="/icon-copyright.png"
               alt="amor"
-              class="h-4 w-4 inline m-1"
+              class="h-2 w-2 inline m-1"
               aria-hidden="true"
             />
             pela equipe
