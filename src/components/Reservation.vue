@@ -24,13 +24,14 @@
                 {{ field.label }}
               </label>
 
-              <!-- Select -->
               <select
                 v-if="field.type === 'select'"
                 :id="field.id"
                 :required="field.required"
+                v-model="formData[field.id]"
                 class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rosa-claro focus:border-transparent"
               >
+                <option disabled value="">Selecione...</option>
                 <option
                   v-for="option in field.options"
                   :key="option.value"
@@ -40,7 +41,6 @@
                 </option>
               </select>
 
-              <!-- Telefone -->
               <input
                 v-else-if="field.id === 'customerPhone'"
                 :id="field.id"
@@ -48,39 +48,38 @@
                 :placeholder="field.placeholder"
                 :required="field.required"
                 v-model="phone"
-                @input="formatPhone"
+                @input="onPhoneInput"
                 maxlength="15"
                 class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rosa-claro focus:border-transparent"
               />
 
-              <!-- Data e hora -->
               <input
                 v-else-if="field.id === 'reservationDate'"
                 :id="field.id"
                 type="date"
                 :min="minDate"
                 :required="field.required"
-                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rosa-claro focus:border-transparent"
                 v-model="reservationDate"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rosa-claro focus:border-transparent"
               />
+
               <input
                 v-else-if="field.id === 'reservationTime'"
                 :id="field.id"
                 type="time"
                 :required="field.required"
-                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rosa-claro focus:border-transparent"
                 v-model="reservationTime"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rosa-claro focus:border-transparent"
               />
 
-              <!-- Outros inputs -->
               <input
                 v-else
                 :id="field.id"
                 :type="field.type"
                 :placeholder="field.placeholder"
                 :min="field.min"
-                :value="field.value"
                 :required="field.required"
+                v-model="formData[field.id]"
                 class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rosa-claro focus:border-transparent"
               />
             </div>
@@ -97,6 +96,7 @@
               :id="reservationData.form.textarea.id"
               :placeholder="reservationData.form.textarea.placeholder"
               :rows="reservationData.form.textarea.rows"
+              v-model="formData[reservationData.form.textarea.id]"
               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rosa-claro focus:border-transparent resize-none"
             ></textarea>
           </div>
@@ -118,64 +118,90 @@
 </template>
 
 <script>
-import { reservationData } from "../data/reservationData";
+import { reservationData } from '../data/reservationData';
 
 export default {
-  name: "Reservation",
+  name: 'Reservation',
   data() {
-    const now = new Date();
-    const minDate = now.toISOString().split("T")[0]; // data mínima = hoje
     return {
-      reservationData: reservationData,
-      phone: "",
-      reservationDate: minDate,
-      reservationTime: "",
-      minDate,
+      reservationData,
+      phone: '',
+      reservationDate: this.getToday(),
+      reservationTime: '',
+      minDate: this.getToday(),
+      formData: {},
     };
   },
-  methods: {
-    formatPhone() {
-      let digits = this.phone.replace(/\D/g, "");
-      if (digits.length > 11) digits = digits.substring(0, 11);
-
-      if (digits.length <= 10) {
-        this.phone = digits.replace(/^(\d{2})(\d{4})(\d{0,4})$/, "($1) $2-$3");
+  created() {
+    this.reservationData.form.fields.forEach((field) => {
+      if (field.type === 'number' && field.value) {
+        this.formData[field.id] = field.value;
       } else {
-        this.phone = digits.replace(
-          /^(\d{2})(\d{5})(\d{0,4})$/,
-          "($1) $2-$3"
+        this.formData[field.id] = '';
+      }
+    });
+    this.formData[this.reservationData.form.textarea.id] = '';
+  },
+  methods: {
+    getToday() {
+      const now = new Date();
+      const yyyy = now.getFullYear();
+      const mm = String(now.getMonth() + 1).padStart(2, '0');
+      const dd = String(now.getDate()).padStart(2, '0');
+      return `${yyyy}-${mm}-${dd}`;
+    },
+
+    onPhoneInput(e) {
+      const raw = (e?.target?.value || '').replace(/\D/g, '').substring(0, 11);
+
+      if (raw.length <= 10) {
+        this.phone = raw.replace(
+          /^(\d{0,2})(\d{0,4})(\d{0,4}).*/,
+          (m, p1, p2, p3) =>
+            `${p1 ? `(${p1}` : ''}${p1.length === 2 ? ')' : ''}${
+              p2 ? ` ${p2}` : ''
+            }${p3 ? `-${p3}` : ''}`
+        );
+      } else {
+        this.phone = raw.replace(
+          /^(\d{0,2})(\d{0,5})(\d{0,4}).*/,
+          (m, p1, p2, p3) =>
+            `${p1 ? `(${p1}` : ''}${p1.length === 2 ? ')' : ''}${
+              p2 ? ` ${p2}` : ''
+            }${p3 ? `-${p3}` : ''}`
         );
       }
     },
 
     submitReservation() {
       const now = new Date();
-      const selectedDateTime = new Date(`${this.reservationDate}T${this.reservationTime}`);
 
-      // Garantir 2h de antecedência
+      const [year, month, day] = (this.reservationDate || '')
+        .split('-')
+        .map(Number);
+      const [hour, minute] = (this.reservationTime || '00:00')
+        .split(':')
+        .map(Number);
+      const selectedDateTime = new Date(year, month - 1, day, hour, minute);
+
       const minReservationTime = new Date(now.getTime() + 2 * 60 * 60 * 1000);
       if (selectedDateTime < minReservationTime) {
-        alert("Por favor, escolha uma data e horário a partir de 2 horas do momento atual.");
+        alert(
+          'Por favor, escolha uma data e horário a partir de 2 horas do momento atual.'
+        );
         return;
       }
 
-      const formData = {};
+      const formData = {
+        ...this.formData,
+        customerPhone: this.phone,
+        reservationDate: this.reservationDate,
+        reservationTime: this.reservationTime,
+      };
 
-      this.reservationData.form.fields.forEach((field) => {
-        if (field.id === "customerPhone") {
-          formData[field.id] = this.phone;
-        } else {
-          formData[field.id] = document.getElementById(field.id).value;
-        }
-      });
-
-      formData[this.reservationData.form.textarea.id] = document.getElementById(
-        this.reservationData.form.textarea.id
-      ).value;
-
-      const formattedDate = new Date(
-        formData.reservationDate
-      ).toLocaleDateString("pt-BR");
+      const formattedDate = new Date(year, month - 1, day).toLocaleDateString(
+        'pt-BR'
+      );
 
       let message = `${this.reservationData.whatsapp.messageTemplate.header}\n\n`;
       message += `${this.reservationData.whatsapp.messageTemplate.fields.name} ${formData.customerName}\n`;
@@ -193,13 +219,12 @@ export default {
 
       const encodedMessage = encodeURIComponent(message);
       const whatsappURL = `https://wa.me/${this.reservationData.whatsapp.number}?text=${encodedMessage}`;
+      window.open(whatsappURL, '_blank');
 
-      window.open(whatsappURL, "_blank");
-
-      document.getElementById("reservationForm").reset();
-      this.phone = "";
-      this.reservationDate = this.minDate;
-      this.reservationTime = "";
+      this.phone = '';
+      this.reservationDate = this.getToday();
+      this.reservationTime = '';
+      Object.keys(this.formData).forEach((k) => (this.formData[k] = ''));
     },
   },
 };

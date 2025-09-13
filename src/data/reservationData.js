@@ -50,7 +50,6 @@ export const reservationData = {
         type: "select",
         required: true,
         options: [
-          { value: "", text: "Selecione um horário" },
           { value: "11:30 - 12:00", text: "11:30 - 12:00" },
           { value: "12:00 - 12:30", text: "12:00 - 12:30" },
           { value: "14:00 - 14:30", text: "14:00 - 14:30" },

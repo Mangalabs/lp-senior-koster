@@ -1,7 +1,7 @@
 <template>
   <section
     id="home"
-    class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+    class="min-h-screen sm:min-h-screen flex items-center justify-center relative overflow-hidden pt-16 sm:pt-20 md:pt-24"
   >
     <div class="absolute inset-0 z-0">
       <div class="slideshow-container w-full h-full">
@@ -30,32 +30,36 @@
     </div>
 
     <div class="container mx-auto px-6 text-center relative z-20">
-      <div class="fade-in mb-8">
+      <div class="fade-in mb-4 sm:mb-8 md:mb-10">
         <div>
           <img
             :src="heroData.logo.imageUrl"
             :alt="heroData.logo.altText"
-            class="size-60 mx-auto mb-8 bg-white rounded-full shadow-2xl flex items-center justify-center"
+            class="size-58 mx-auto mb-8 bg-white rounded-full shadow-2xl flex items-center justify-center"
           />
         </div>
 
         <h3
-          class="font-display text-3xl md:text-5xl font-bold mb-6 text-neutro-escuro drop-shadow-lg"
+          class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 md:mb-8 text-neutro-escuro drop-shadow-lg"
         >
           {{ heroData.title }}<br />
-          <span class="text-azul-escuro drop-shadow">{{ heroData.highlightedTitle }}</span
+          <span class="text-azul-escuro drop-shadow">{{
+            heroData.highlightedTitle
+          }}</span
           ><br />
           <span class="drop-shadow">{{ heroData.subtitle }}</span>
         </h3>
       </div>
 
       <div class="fade-in fade-in-delay">
-        <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto drop-shadow">
+        <p
+          class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-6 sm:mb-8 md:mb-10 max-w-2xl mx-auto drop-shadow"
+        >
           {{ heroData.description }}
         </p>
         <a
           :href="heroData.ctaLink"
-          class="btn-primary text-white px-8 py-4 rounded-full text-lg font-medium inline-block drop-shadow"
+          class="btn-primary text-white px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-full text-base sm:text-lg md:text-xl font-medium inline-block drop-shadow"
         >
           {{ heroData.ctaText }}
         </a>
@@ -65,10 +69,10 @@
 </template>
 
 <script>
-import { siteData } from "../data/data.js";
+import { siteData } from '../data/data.js';
 
 export default {
-  name: "Hero",
+  name: 'Hero',
   data() {
     return {
       heroData: siteData.hero,
