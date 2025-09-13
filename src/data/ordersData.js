@@ -5,7 +5,7 @@ export const ordersData = {
   description: "Doces, salgados e bolos personalizados para seus eventos",
   cta: {
     text: "Fazer Encomenda",
-    url: "https://wa.me/5585991133102",
+    url: "https://wa.me/55413277-3923",
     class: "btn-secondary"
   },
   products: [
