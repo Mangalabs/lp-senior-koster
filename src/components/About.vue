@@ -6,7 +6,7 @@
           <div
             :class="[
               'w-64 sm:w-72 md:w-80',
-              'h-64 sm:h-72 md:h-80',
+              'aspect-[4/5]',
               'mx-auto',
               'rounded-md',
               'flex',

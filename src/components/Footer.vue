@@ -13,7 +13,7 @@
           </p>
           <div class="flex space-x-4">
             <a
-              href="https://wa.me/5541932773923"
+              href="https://wa.me/554132773923"
               target="_blank"
               class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-full transition-colors"
             >
@@ -43,7 +43,23 @@
           <div class="space-y-2 text-gray-300">
             <p>📞 (41) 3277-3923</p>
             <p>📍 Rua Constantino José de Almeida, 233</p>
-            <p>✉️ contato@seniorkoster.com.br</p>
+          </div>
+
+          <div class="mt-6 flex space-x-4">
+            <a
+              href="https://www.instagram.com/seniorkoster"
+              target="_blank"
+              class="bg-pink-500 hover:bg-pink-600 px-4 py-2 rounded-full transition-colors"
+            >
+              Instagram
+            </a>
+            <a
+              href="https://www.facebook.com/seniorkosterbolosartisticos"
+              target="_blank"
+              class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition-colors"
+            >
+              Facebook
+            </a>
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@ export const ordersData = {
     {
       id: 2,
       type: "emoji",
-      img: "/salgado.png",
+      img: "/lanchao.jpeg",
       title: "Salgados",
       description: "Variedade de salgados artesanais para eventos corporativos",
       bgClass: "bg-white",

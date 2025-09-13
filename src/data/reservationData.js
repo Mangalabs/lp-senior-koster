@@ -74,7 +74,7 @@ export const reservationData = {
     }
   },
   whatsapp: {
-    number: "5585991133102",
+    number: "554132773923",
     messageTemplate: {
       header: "🍰 *NOVA RESERVA - Senior Koster*",
       fields: {

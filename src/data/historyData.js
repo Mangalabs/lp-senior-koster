@@ -2,7 +2,7 @@ export const historyData = {
   title: "Nossa História",
   description: "Tradição familiar e paixão pela confeitaria artesanal",
   mainSection: {
-    image: "/lugar.png",
+    image: "/loja.jpg",
     title: "Desde 2008",
     paragraphs: [
       "A Senior Koster nasceu do sonho de criar uma confeitaria que combinasse tradição familiar com técnicas modernas. Localizada no coração da cidade, nossa confeitaria se tornou um ponto de encontro para quem aprecia sabores autênticos.",
