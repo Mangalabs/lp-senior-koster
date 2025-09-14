@@ -94,8 +94,8 @@ export const siteData = {
     subtitle: 'Deliciosos!',
     description:
       'Sabores únicos feitos com carinho e ingredientes selecionados para momentos especiais',
-    ctaText: 'Faça sua reserva',
-    ctaLink: '#reservas',
+    ctaText: 'Faça sua encomenda',
+    ctaLink: '#encomendas',
     slides: shuffleFirst(slides),
     logo: {
       imageUrl: '/icon.png',

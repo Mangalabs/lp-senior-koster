@@ -10,7 +10,6 @@
           <a href="#home" class="text-gray-700 hover:text-pink-400 transition-colors">Home</a>
           <a href="#produtos" class="text-gray-700 hover:text-pink-400 transition-colors">Produtos</a>
           <a href="#sobre" class="text-gray-700 hover:text-pink-400 transition-colors">Sobre</a>
-          <a href="#reservas" class="text-gray-700 hover:text-pink-400 transition-colors">Reservas</a>
           <a href="#encomendas" class="text-gray-700 hover:text-pink-400 transition-colors">Encomendas</a>
           <a href="#contato" class="text-gray-700 hover:text-pink-400 transition-colors">Contato</a>
         </div>
