@@ -4,7 +4,6 @@
     <Hero />
     <Products />
     <About />
-    <Reservation />
     <Orders />
     <History />
     <Location />
@@ -17,7 +16,6 @@ import Header from './components/Header.vue'
 import Hero from './components/Hero.vue'
 import Products from './components/Products.vue'
 import About from './components/About.vue'
-import Reservation from './components/Reservation.vue'
 import Orders from './components/Orders.vue'
 import History from './components/History.vue'
 import Location from './components/Location.vue'
@@ -30,7 +28,6 @@ export default {
     Hero,
     Products,
     About,
-    Reservation,
     Orders,
     History,
     Location,
