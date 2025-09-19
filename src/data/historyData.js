@@ -3,10 +3,13 @@ export const historyData = {
   description: "Tradição familiar e paixão pela confeitaria artesanal",
   mainSection: {
     image: "/loja.jpg",
-    title: "Desde 2008",
+    title: "Desde 2022",
     paragraphs: [
-      "A Senior Koster nasceu do sonho de criar uma confeitaria que combinasse tradição familiar com técnicas modernas. Localizada no coração da cidade, nossa confeitaria se tornou um ponto de encontro para quem aprecia sabores autênticos.",
-      "Cada receita é cuidadosamente desenvolvida, utilizando ingredientes frescos e de qualidade. Nosso compromisso é proporcionar momentos especiais através de produtos artesanais únicos."
+      "Em meio à correria diária, a Sênior Koster surge para possibilitar a criação de momentos especiais através de pequenas pausas, nas quais você pode desfrutar de sabores ricamente trabalhados e atendimento acolhedor e intimista.",
+
+      "Nossa confeitaria é um ambiente aberto para os apreciadores de bons doces, pessoas que gostam de levar a vida de forma mais açucarada e um excelente lugar para desacelerar no fim do dia, voltando de algum compromisso ou até mesmo após buscar seus filhos no colégio.",
+
+      "Proporcionamos aos nossos clientes o que há de melhor, para aconchegá-los em nossa atmosfera calma e cativá-los com nossos sabores e culinária, criando, assim, momentos inesquecíveis.",
     ]
   },
   features: [
