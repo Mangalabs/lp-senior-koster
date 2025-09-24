@@ -40,7 +40,7 @@ export const ordersData = {
     {
       id: 4,
       type: "emoji",
-      img: "/torta-de-limao.jpg",
+      img: "/tortele-de-limão.jpg",
       title: "E Muito Mais!",
       description: "Tortas, quiches, pães especiais e outras delícias artesanais",
       bgClass: "bg-gradient-to-br from-pink-50 to-yellow-50",

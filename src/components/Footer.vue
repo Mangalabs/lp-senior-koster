@@ -42,7 +42,7 @@
           <h4 class="font-semibold text-lg mb-4">Contato</h4>
           <div class="space-y-2 text-gray-300">
             <p>📞 (41) 3277-3923</p>
-            <p>📍 Rua Constantino José de Almeida, 233</p>
+            <p>📍 Rua Constantino José de Almeida, 233, Xaxim - Curitiba/PR</p>
           </div>
 
           <div class="mt-6 flex space-x-4">

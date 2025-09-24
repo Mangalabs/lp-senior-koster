@@ -5,7 +5,7 @@ export const historyData = {
     image: "/loja.jpg",
     title: "Desde 2022",
     paragraphs: [
-      "Em meio à correria diária, a Sênior Koster surge para possibilitar a criação de momentos especiais através de pequenas pausas, nas quais você pode desfrutar de sabores ricamente trabalhados e atendimento acolhedor e intimista.",
+      "Em meio à correria diária, a Senior Koster surge para possibilitar a criação de momentos especiais através de pequenas pausas, nas quais você pode desfrutar de sabores ricamente trabalhados e atendimento acolhedor e intimista.",
 
       "Nossa confeitaria é um ambiente aberto para os apreciadores de bons doces, pessoas que gostam de levar a vida de forma mais açucarada e um excelente lugar para desacelerar no fim do dia, voltando de algum compromisso ou até mesmo após buscar seus filhos no colégio.",
 

@@ -10,15 +10,15 @@
         <p class="text-xl text-gray-600">{{ productsData.description }}</p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
         <div
           v-for="product in productsData.products"
           :key="product.id"
-          class="hover-lift rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105"
+          class="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-105"
           :class="product.bgColor"
         >
           <div
-            class="aspect-[4/3] w-full max-h-60 overflow-hidden rounded-t-2xl flex items-center justify-center"
+            class="aspect-[4/3] w-full overflow-hidden rounded-t-2xl flex items-center justify-center"
             :class="product.gradient"
           >
             <img
@@ -35,7 +35,9 @@
             >
               {{ product.title }}
             </h3>
-            <p class="text-gray-600">{{ product.description }}</p>
+            <p class="text-gray-600 text-base md:text-lg">
+              {{ product.description }}
+            </p>
           </div>
         </div>
       </div>

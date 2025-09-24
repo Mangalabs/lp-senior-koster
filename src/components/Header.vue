@@ -15,8 +15,8 @@
         </div>
 
         <div class="hidden lg:flex space-x-3 flex-shrink-0">
-          <a href="https://wa.me/554132773923" target="_blank" class="btn-primary text-white px-4 py-2 rounded-full text-sm font-medium">WhatsApp</a>
-          <a href="https://www.ifood.com.br/delivery/curitiba-pr/confeitaria-senior-koster-ltda-xaxim/53ebf9c4-aae2-4834-9e35-ba358542ff16" target="_blank" class="btn-secondary text-white px-4 py-2 rounded-full text-sm font-medium">iFood</a>
+          <a href="https://wa.me/554132773923" target="_blank" class="bg-green-500 hover:bg-green-600 transition-colors text-white px-4 py-2 rounded-full text-sm font-medium">WhatsApp</a>
+          <a href="https://www.ifood.com.br/delivery/curitiba-pr/confeitaria-senior-koster-ltda-xaxim/53ebf9c4-aae2-4834-9e35-ba358542ff16" target="_blank" class="bg-red-500 hover:bg-red-600 transition-colors text-white px-4 py-2 rounded-full text-sm font-medium">iFood</a>
         </div>
 
         <button @click="isOpen = !isOpen" class="lg:hidden focus:outline-none ml-2">
@@ -37,7 +37,7 @@
 
         <div class="flex flex-col space-y-3 pt-4 border-t border-gray-200">
           <a href="https://wa.me/554132773923" target="_blank" class="btn-primary text-white px-4 py-2 rounded-full text-sm font-medium text-center">WhatsApp</a>
-          <a href="https://www.ifood.com.br/delivery/curitiba-pr/confeitaria-senior-koster-ltda-xaxim/53ebf9c4-aae2-4834-9e35-ba358542ff16" target="_blank" class="btn-secondary text-white px-4 py-2 rounded-full text-sm font-medium text-center">iFood</a>
+          <a href="https://www.ifood.com.br/delivery/curitiba-pr/confeitaria-senior-koster-ltda-xaxim/53ebf9c4-aae2-4834-9e35-ba358542ff16" target="_blank" class="bg-red-500 hover:bg-red-600 transition-colors text-white px-4 py-2 rounded-full text-sm font-medium text-center">iFood</a>
         </div>
       </div>
     </nav>

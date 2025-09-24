@@ -31,7 +31,7 @@
           <p 
             v-for="(paragraph, index) in aboutData.person.description" 
             :key="index"
-            class="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed"
+            class="text-base sm:text-md text-gray-700 mb-4 sm:mb-6 leading-relaxed"
           >
             {{ paragraph }}
           </p>

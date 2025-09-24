@@ -6,10 +6,11 @@ export const aboutData = {
     altText: "Aleks - Fundador da Senior Koster",
     gradient: "bg-gradient-to-br from-rosa-claro/30 to-azul-claro/30",
     description: [
-      "Aleks advém da tradição da confeitaria. Desde criança, observava sua mãe, Irani, abrilhantar comemorações com seus bolos e doces. Sua influência motivou-o a ter contato direto com a confeitaria.",
-      "Assim, quando a Confeitaria Doce Mel expandiu suas atividades, no ano de 1994, para a região de Matinhos, no litoral paranaense, Aleks se viu, aos 13 anos, iniciar sua carreira fazendo suas primeiras tortas e bolos.",
-      "Após uma longa temporada entre a Áustria e Espanha, o confeiteiro volta ao Brasil para iniciar seu trabalho na confeitaria artesanal, seguindo assim os passos de sua mãe.",
-      "Em 2022 inicia um grande marco em sua carreira, inaugurando a Senior Koster, sua confeitaria, onde seus estudos em pães artesanais, confeitaria fina, doces franceses, entre outros, entram em voga para proporcionar momentos felizes e especiais através das suas delícias coloridas, artesanais e saborosas desenvolvidas com a aliança das técnicas atuais e tradicionais, de forma mais saudável."
+      "A paixão de Aleks pela confeitaria nasceu da tradição familiar. Desde a infância, observava sua mãe, Irani, transformar momentos simples em celebrações memoráveis com seus bolos e doces artesanais. Foi essa convivência que despertou, desde cedo, sua conexão profunda com a confeitaria.",
+      "Em 1994, quando a Confeitaria Doce Mel expandiu suas atividades para a cidade de Matinhos, no litoral paranaense, Aleks, então com apenas 13 anos, iniciou sua trajetória profissional preparando suas primeiras tortas e bolos, um início precoce que revelava o talento herdado e cultivado em casa.",
+      "Sua jornada ganhou contornos internacionais ao passar uma longa temporada entre a Áustria e a Espanha, onde aprofundou seus conhecimentos e técnicas em confeitaria europeia, absorvendo referências culturais e gastronômicas que viriam a enriquecer ainda mais seu repertório.",
+      "De volta ao Brasil, Aleks decidiu resgatar suas raízes e seguir os passos de sua mãe, mergulhando na confeitaria artesanal com um olhar contemporâneo.",
+      "Em 2022, marca um novo capítulo em sua carreira com a inauguração da Senior Koster, sua própria confeitaria. Nela, Aleks une o melhor da tradição à inovação: técnicas clássicas e modernas se encontram na criação de pães artesanais, confeitaria fina, doces europeus e outras delícias cuidadosamente desenvolvidas. Tudo com um propósito claro, proporcionar momentos especiais por meio de sabores únicos, receitas mais saudáveis e uma confeitaria colorida, artesanal e autêntica."
     ]
   }
 }

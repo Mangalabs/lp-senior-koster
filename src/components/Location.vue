@@ -5,7 +5,7 @@
         <h2 class="font-display text-4xl md:text-5xl font-bold mb-4" style="color: var(--neutro-escuro);">
           Onde Estamos
         </h2>
-        <p class="text-xl text-gray-600">Rua Constantino José de Almeida, 233</p>
+        <p class="text-xl text-gray-600">Rua Constantino José de Almeida, 233, Xaxim - Curitiba/PR</p>
       </div>
 
       <div class="bg-white rounded-2xl p-6 shadow-xl max-w-5xl mx-auto">
@@ -21,7 +21,7 @@
 
         <div class="text-center mt-6">
           <a href="https://maps.app.goo.gl/f1mvS27i9Dt4hrru5" target="_blank"
-             class="inline-block bg-pink-500 text-white px-6 py-3 rounded-full shadow-md hover:bg-pink-600 transition-colors font-medium">
+             class="btn-primary inline-block text-white px-6 py-3 rounded-full shadow-md transition-colors font-medium">
             📍 Abrir no Google Maps
           </a>
         </div>
