@@ -1,8 +1,10 @@
 <template>
-  <section :id="ordersData.id" :class="['py-20', ordersData.background]">
+  <section :class="['py-20', ordersData.background]">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 text-neutro-escuro">
+        <h2
+          class="font-display text-4xl md:text-5xl font-bold mb-4 text-neutro-escuro"
+        >
           {{ ordersData.title }}
         </h2>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -20,18 +22,28 @@
             product.borderClass,
           ]"
         >
-          <div class="mb-4 aspect-[4/3] w-full overflow-hidden rounded-2xl flex items-center justify-center">
-            <img :src="product.img" :alt="product.alt" class="w-full h-full object-cover" />
-          </div>
+          <a :href="product.link" target="_blank">
+            <div
+              class="mb-4 aspect-[4/3] w-full overflow-hidden rounded-2xl flex items-center justify-center"
+            >
+              <img
+                :src="product.img"
+                :alt="product.alt"
+                class="w-full h-full object-cover"
+              />
+            </div>
 
-          <h3 class="font-display text-xl font-semibold mb-2 text-neutro-escuro">
-            {{ product.title }}
-          </h3>
-          <p class="text-gray-600">{{ product.description }}</p>
+            <h3
+              class="font-display text-xl font-semibold mb-2 text-neutro-escuro"
+            >
+              {{ product.title }}
+            </h3>
+            <p class="text-gray-600">{{ product.description }}</p>
+          </a>
         </div>
       </div>
 
-      <div class="max-w-2xl mx-auto">
+      <div :id="ordersData.id" class="max-w-2xl mx-auto">
         <form
           id="orderForm"
           class="bg-white rounded-2xl p-6 md:p-10 shadow-2xl"
@@ -42,13 +54,18 @@
               Faça sua encomenda
             </h3>
             <p class="text-gray-500">
-              Preencha os dados abaixo e finalize seu pedido direto pelo WhatsApp.
+              Preencha os dados abaixo e finalize seu pedido direto pelo
+              WhatsApp.
             </p>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div>
-              <label for="customerName" class="block text-gray-700 font-medium mb-2">Nome</label>
+              <label
+                for="customerName"
+                class="block text-gray-700 font-medium mb-2"
+                >Nome</label
+              >
               <input
                 id="customerName"
                 type="text"
@@ -60,7 +77,11 @@
             </div>
 
             <div>
-              <label for="customerPhone" class="block text-gray-700 font-medium mb-2">Telefone</label>
+              <label
+                for="customerPhone"
+                class="block text-gray-700 font-medium mb-2"
+                >Telefone</label
+              >
               <input
                 id="customerPhone"
                 type="tel"
@@ -81,7 +102,9 @@
               class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4 relative"
             >
               <div>
-                <label class="block text-gray-700 font-medium mb-2">Produto</label>
+                <label class="block text-gray-700 font-medium mb-2"
+                  >Produto</label
+                >
                 <input
                   type="text"
                   v-model="item.productType"
@@ -92,7 +115,9 @@
               </div>
 
               <div>
-                <label class="block text-gray-700 font-medium mb-2">Quantidade</label>
+                <label class="block text-gray-700 font-medium mb-2"
+                  >Quantidade</label
+                >
                 <input
                   type="number"
                   v-model="item.quantity"
@@ -123,7 +148,11 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div>
-              <label for="orderDate" class="block text-gray-700 font-medium mb-2">Data da Encomenda</label>
+              <label
+                for="orderDate"
+                class="block text-gray-700 font-medium mb-2"
+                >Data da Encomenda</label
+              >
               <input
                 id="orderDate"
                 type="date"
@@ -135,7 +164,11 @@
             </div>
 
             <div>
-              <label for="pickupTime" class="block text-gray-700 font-medium mb-2">Horário de Retirada</label>
+              <label
+                for="pickupTime"
+                class="block text-gray-700 font-medium mb-2"
+                >Horário de Retirada</label
+              >
               <select
                 id="pickupTime"
                 required
@@ -143,7 +176,11 @@
                 class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rosa-claro focus:border-transparent"
               >
                 <option disabled value="">Selecione...</option>
-                <option v-for="option in pickupOptions" :key="option" :value="option">
+                <option
+                  v-for="option in pickupOptions"
+                  :key="option"
+                  :value="option"
+                >
                   {{ option }}
                 </option>
               </select>
@@ -151,7 +188,11 @@
           </div>
 
           <div class="mb-8">
-            <label for="observations" class="block text-gray-700 font-medium mb-2">Observações (opcional)</label>
+            <label
+              for="observations"
+              class="block text-gray-700 font-medium mb-2"
+              >Observações (opcional)</label
+            >
             <textarea
               id="observations"
               placeholder="Alguma observação especial sobre sua encomenda..."
@@ -197,9 +238,7 @@ export default {
         customerName: "",
         pickupTime: "",
         observations: "",
-        products: [
-          { productType: "", quantity: 1 },
-        ],
+        products: [{ productType: "", quantity: 1 }],
       },
     };
   },
@@ -240,10 +279,10 @@ export default {
       }
     },
     submitOrder() {
-      const [year, month, day] = (this.orderDate || "")
-        .split("-")
-        .map(Number);
-      const formattedDate = new Date(year, month - 1, day).toLocaleDateString("pt-BR");
+      const [year, month, day] = (this.orderDate || "").split("-").map(Number);
+      const formattedDate = new Date(year, month - 1, day).toLocaleDateString(
+        "pt-BR"
+      );
 
       const formData = {
         ...this.formData,

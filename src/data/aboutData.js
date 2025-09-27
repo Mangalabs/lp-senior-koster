@@ -10,7 +10,6 @@ export const aboutData = {
       "Em 1994, quando a Confeitaria Doce Mel expandiu suas atividades para a cidade de Matinhos, no litoral paranaense, Aleks, então com apenas 13 anos, iniciou sua trajetória profissional preparando suas primeiras tortas e bolos, um início precoce que revelava o talento herdado e cultivado em casa.",
       "Sua jornada ganhou contornos internacionais ao passar uma longa temporada entre a Áustria e a Espanha, onde aprofundou seus conhecimentos e técnicas em confeitaria europeia, absorvendo referências culturais e gastronômicas que viriam a enriquecer ainda mais seu repertório.",
       "De volta ao Brasil, Aleks decidiu resgatar suas raízes e seguir os passos de sua mãe, mergulhando na confeitaria artesanal com um olhar contemporâneo.",
-      "Em 2022, marca um novo capítulo em sua carreira com a inauguração da Senior Koster, sua própria confeitaria. Nela, Aleks une o melhor da tradição à inovação: técnicas clássicas e modernas se encontram na criação de pães artesanais, confeitaria fina, doces europeus e outras delícias cuidadosamente desenvolvidas. Tudo com um propósito claro, proporcionar momentos especiais por meio de sabores únicos, receitas mais saudáveis e uma confeitaria colorida, artesanal e autêntica."
     ]
   }
 }

@@ -16,7 +16,7 @@
             { active: index === 0 },
           ]"
         >
-          <div class="absolute inset-0 bg-white bg-opacity-20"></div>
+          <div class="absolute inset-0 bg-neutral-200 bg-opacity-20"></div>
           <div :class="[slide.opacity]">
             <img
               v-if="slide.content === 'image'"

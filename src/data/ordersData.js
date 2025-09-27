@@ -6,7 +6,7 @@ export const ordersData = {
   cta: {
     text: "Fazer Encomenda",
     url: "https://wa.me/55413277-3923",
-    class: "btn-secondary"
+    class: "btn-secondary",
   },
   products: [
     {
@@ -15,9 +15,11 @@ export const ordersData = {
       img: "/bolo-de-festa.jpg",
       alt: "Bolos de Festa",
       title: "Bolos de Festa",
-      description: "Bolos personalizados para aniversários, casamentos e celebrações",
-      bgClass: "bg-white",
-      borderClass: ""
+      description:
+        "Bolos personalizados para aniversários, casamentos e celebrações",
+      bgClass: "bg-gradient-to-br from-pink-50 to-yellow-50",
+      borderClass: "border-2 border-dashed border-pink-300",
+      link: "https://www.instagram.com/p/DN5_08tkU9-/?utm_source=ig_web_copy_link&igsh=cWR1cWNjdDQyeGtn",
     },
     {
       id: 2,
@@ -25,8 +27,9 @@ export const ordersData = {
       img: "/lanchao.jpeg",
       title: "Salgados",
       description: "Variedade de salgados artesanais para eventos corporativos",
-      bgClass: "bg-white",
-      borderClass: ""
+      bgClass: "bg-gradient-to-br from-pink-50 to-yellow-50",
+      borderClass: "border-2 border-dashed border-pink-300",
+      link: "https://www.instagram.com/p/Csg-qAAODVU/?utm_source=ig_web_copy_link&igsh=MXFla21rOW82dnE3aQ==",
     },
     {
       id: 3,
@@ -34,17 +37,20 @@ export const ordersData = {
       img: "/brigadeiro.jpg",
       title: "Doces Finos",
       description: "Brigadeiros gourmet, cookies e doces especiais",
-      bgClass: "bg-white",
-      borderClass: ""
+      bgClass: "bg-gradient-to-br from-pink-50 to-yellow-50",
+      borderClass: "border-2 border-dashed border-pink-300",
+      link: "https://www.instagram.com/p/CnaAdMLuWbF/?utm_source=ig_web_copy_link&igsh=bXZicXpydDRxc2F2",
     },
     {
       id: 4,
       type: "emoji",
       img: "/tortele-de-limão.jpg",
       title: "E Muito Mais!",
-      description: "Tortas, quiches, pães especiais e outras delícias artesanais",
+      description:
+        "Tortas, quiches, pães especiais e outras delícias artesanais",
       bgClass: "bg-gradient-to-br from-pink-50 to-yellow-50",
-      borderClass: "border-2 border-dashed border-pink-300"
-    }
-  ]
-}
+      borderClass: "border-2 border-dashed border-pink-300",
+      link: "https://www.instagram.com/seniorkoster/",
+    },
+  ],
+};
