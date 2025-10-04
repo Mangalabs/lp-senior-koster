@@ -62,12 +62,6 @@ const slides = [
     opacity: 'opacity-30',
   },
   {
-    background: 'bg-gradient-to-br from-pink-50 via-yellow-100 to-green-200',
-    content: 'image',
-    imageUrl: '/torta-de-limao.jpg',
-    opacity: 'opacity-30',
-  },
-  {
     background: 'bg-gradient-to-br from-yellow-100 via-pink-100 to-green-100',
     content: 'image',
     imageUrl: '/tortele-de-limão.jpg',

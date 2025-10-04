@@ -15,15 +15,6 @@ export const productsData = {
     },
     {
       id: 2,
-      title: "Pão Integral Multigrãos",
-      description: "Pão nutritivo com grãos e sementes, saboroso e saudável",
-      img: "/pao-integral.jpg",
-      gradient: "bg-gradient-to-br from-blue-100 to-blue-200",
-      bgColor: "bg-white",
-      textColor: "text-neutro-escuro",
-    },
-    {
-      id: 3,
       title: "Pães Frescos",
       description:
         "Pães artesanais assados diariamente com fermentação prolongada",
@@ -33,11 +24,20 @@ export const productsData = {
       textColor: "text-neutro-escuro",
     },
     {
-      id: 4,
+      id: 3,
       title: "Doces Especiais",
       description:
         "Cheesecake, brigadeiros gourmet e doces para ocasiões especiais",
       img: "/cheesecake.jpg",
+      gradient: "bg-gradient-to-br from-blue-100 to-blue-200",
+      bgColor: "bg-white",
+      textColor: "text-neutro-escuro",
+    },
+    {
+      id: 4,
+      title: "Pão 100% Integral Multigrãos",
+      description: "Pão nutritivo com grãos e sementes, saboroso e saudável",
+      img: "/pao-integral.jpg",
       gradient: "bg-gradient-to-br from-blue-100 to-blue-200",
       bgColor: "bg-white",
       textColor: "text-neutro-escuro",
